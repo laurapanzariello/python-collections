@@ -1,4 +1,8 @@
-class Account:
+from abc import ABCMeta
+from abc import abstractmethod
+
+
+class Account(metaclass=ABCMeta):
 	
 	def __init__(self, account):
 		self._account = account
@@ -10,8 +14,6 @@ class Account:
 	def __str__(self):
 		return "[>> Account {} Balance {}<<]".format(self._account, self._balance)
 
-
-if __name__ == '__main__':
-	code = input("Account number: ")
-	new = Account(code)
-	print(new)
+	@abstractmethod
+	def tax(self):
+		pass
