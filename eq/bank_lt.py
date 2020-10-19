@@ -1,6 +1,7 @@
-from oo.account import CheckingAccount
+from functools import total_ordering
 
 
+@total_ordering
 class Account:
 
     def __init__(self, account):
@@ -50,3 +51,9 @@ if __name__ == '__main__':
 
     for acc in sorted(new_accounts):
         print(acc)
+
+    print("check total_ordering")
+    if c1 <= c3:
+        print("c1 <= c3 is true")
+    else:
+        print("c1 <= c3 is false")
