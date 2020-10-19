@@ -1,4 +1,4 @@
-from tuples.bank import Account
+from oo.bank import Account
 
 
 class CheckingAccount(Account):
